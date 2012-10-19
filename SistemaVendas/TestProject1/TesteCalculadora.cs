@@ -19,6 +19,7 @@ namespace TestProject1
             decimal comissao = Calculadora.CalculaComissao(total_venda);
 
             Assert.AreEqual(valor_esperado, comissao);
+            Assert.AreEqual(2, 1);
         }
          [TestMethod]
         public void Teste_CalculaComissao_Venda10000_Retorna500()
