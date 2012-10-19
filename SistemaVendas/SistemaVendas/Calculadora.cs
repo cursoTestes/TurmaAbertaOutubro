@@ -5,9 +5,15 @@ using System.Text;
 
 namespace SistemaVendas
 {
-    public class Calculadora
+
+    public interface ICalculadora
     {
-        public static decimal CalculaComissao(decimal totalVendas)
+        decimal CalculaComissao(decimal totalVendas);
+    }
+
+    public class Calculadora : ICalculadora
+    {
+        public decimal CalculaComissao(decimal totalVendas)
         {
             decimal valorComissao;
             if (totalVendas <= 10000)

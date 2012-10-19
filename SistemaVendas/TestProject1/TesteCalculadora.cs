@@ -15,11 +15,10 @@ namespace TestProject1
         {
             decimal total_venda = 100;
             decimal valor_esperado = 5;
+            Calculadora calculadora = new Calculadora();
+            decimal comissao = calculadora.CalculaComissao(total_venda);
 
-            decimal comissao = Calculadora.CalculaComissao(total_venda);
-
-            Assert.AreEqual(valor_esperado, comissao);
-            Assert.AreEqual(2, 1);
+            Assert.AreEqual(valor_esperado, comissao);            
         }
          [TestMethod]
         public void Teste_CalculaComissao_Venda10000_Retorna500()
@@ -27,7 +26,8 @@ namespace TestProject1
             decimal total_venda = 10000;
             decimal valor_esperado = 500;
 
-            decimal comissao = Calculadora.CalculaComissao(total_venda);
+            Calculadora calculadora = new Calculadora();
+            decimal comissao = calculadora.CalculaComissao(total_venda);
 
             Assert.AreEqual(valor_esperado, comissao);
         }
@@ -38,7 +38,8 @@ namespace TestProject1
              decimal total_venda = 0;
              decimal valor_esperado = 0;
 
-             decimal comissao = Calculadora.CalculaComissao(total_venda);
+             Calculadora calculadora = new Calculadora();
+             decimal comissao = calculadora.CalculaComissao(total_venda);
 
              Assert.AreEqual(valor_esperado, comissao);
          }
@@ -49,7 +50,8 @@ namespace TestProject1
              decimal total_venda = 11000;
              decimal valor_esperado = 660;
 
-             decimal comissao = Calculadora.CalculaComissao(total_venda);
+             Calculadora calculadora = new Calculadora();
+             decimal comissao = calculadora.CalculaComissao(total_venda);
 
              Assert.AreEqual(valor_esperado, comissao);
          }
@@ -60,7 +62,8 @@ namespace TestProject1
              decimal total_venda = 10001;
              decimal valor_esperado = 600.06m;
 
-             decimal comissao = Calculadora.CalculaComissao(total_venda);
+             Calculadora calculadora = new Calculadora();
+             decimal comissao = calculadora.CalculaComissao(total_venda);
 
              Assert.AreEqual(valor_esperado, comissao);
          }
@@ -72,7 +75,8 @@ namespace TestProject1
              decimal total_venda = 10;
              decimal valor_esperado = 0.50m;
 
-             decimal comissao = Calculadora.CalculaComissao(total_venda);
+             Calculadora calculadora = new Calculadora();
+             decimal comissao = calculadora.CalculaComissao(total_venda);
 
              Assert.AreEqual(valor_esperado, comissao);
          }
@@ -84,7 +88,8 @@ namespace TestProject1
              decimal total_venda = 9999.99m;
              decimal valor_esperado = 499.99m;
 
-             decimal comissao = Calculadora.CalculaComissao(total_venda);
+             Calculadora calculadora = new Calculadora();
+             decimal comissao = calculadora.CalculaComissao(total_venda);
 
              Assert.AreEqual(valor_esperado, comissao);
          }
